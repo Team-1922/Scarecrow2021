@@ -35,7 +35,11 @@ private double rightTOF;
 
     leftTOF = m_eyes.getDistanceLeft();
     rightTOF = m_eyes.getDistanceRight();
-    m_driveTrain.drive(.1, .1);
+
+  if (leftTOF <= 500 || rightTOF <= 500) {
+    m_driveTrain.drive(-.1,.1);
+  }
+  else  m_driveTrain.drive(-.1, -.1);
   }
 
   // Called once the command ends or is interrupted.
@@ -47,9 +51,10 @@ private double rightTOF;
   // Returns true when the command should end.
   @Override
   public boolean isFinished() {
-    if (leftTOF <= 1000 && rightTOF <= 1000) {
+    if (leftTOF <= 100 || rightTOF <= 100) {
       return true;
     }
+    
     return false;
   }
 }

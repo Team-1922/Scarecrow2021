@@ -64,12 +64,12 @@ private final AvoidWall m_avoidWall = new AvoidWall(m_driveTrain, m_TOF);
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
-
+/*
     new JoystickButton(m_XBoxController, 1) //A
           .whenPressed(m_avoidWall);
 
   }
-
+*/
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.
    *
